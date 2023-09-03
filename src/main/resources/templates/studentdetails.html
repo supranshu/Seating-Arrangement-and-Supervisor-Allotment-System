@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Task Management System</a>
+</nav>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Student Details</h1>
+    
+    <!-- Manual Input Form -->
+    <form action="/addStudent" method="post" class="mb-4">
+        <div class="form-row">
+            <div class="mb-3">
+			    <label for="seatNumber" class="form-label">Seat Number:</label>
+			    <input type="number" class="form-control" id="seatNumber" name="seatNumber" th:value="${seatNumber}" required>
+			</div>
+
+
+            <div class="form-group col-md-4">
+                <label for="branch">Branch:</label>
+                <select name="branch" id="branch" class="form-control">
+                    <option value="Comps">Comps</option>
+                    <option value="I.T">I.T</option>
+                    <option value="Mech">Mech</option>
+                    <option value="MTRX">MTRX</option>
+                    <option value="Civil">Civil</option>
+                    <option value="AIDS">AIDS</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="semester">Semester:</label>
+                <select name="semester" id="semester" class="form-control">
+                    <option value="sem-1">Sem-1</option>
+                    <option value="sem-2">Sem-2</option>
+                    <option value="sem-3">Sem-3</option>
+                    <option value="sem-4">Sem-4</option>
+                    <option value="sem-5">Sem-5</option>
+                    <option value="sem-6">Sem-6</option>
+                    <option value="sem-7">Sem-7</option>
+                    <option value="sem-8">Sem-8</option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Student</button>
+        <a href="/getStudents" class="btn btn-secondary">View Students</a>
+    </form>
+    
+    <!-- CSV Upload Form -->
+    <form action="/uploadCSV" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="csvFile">Upload CSV File:</label>
+            <input type="file" class="form-control-file" id="csvFile" name="csvFile" accept=".csv" required>
+        </div>
+        <button type="submit" class="btn btn-success">Upload CSV</button>
+        <a href="/getStudents" class="btn btn-secondary">View Students</a>
+    </form>
+    
+    <!-- Display Entered Data in Table -->
+    <h2 class="mt-4">Entered Data</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Seat Number</th>
+                <th>Branch</th>
+                <th>Semester</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${students}">
+	            <td th:text="${student.seatnumber}"></td>
+	            <td th:text="${student.branch}"></td>
+	            <td th:text="${student.sem}"></td>
+	        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
