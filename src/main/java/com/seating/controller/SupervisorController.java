@@ -36,7 +36,7 @@ public class SupervisorController {
     @PostMapping("/addSupervisor")
     public String addSupervisor(@ModelAttribute Supervisor supervisor) {
         // Save supervisor data from the form
-    	System.out.println(supervisor.toString());
+    	
         supervisorRepo.save(supervisor);
         return "redirect:/supervisordetails";
     }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supervisor Allotment Report</title>
+</head>
+<body>
+    <h1>Supervisor Allotment Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Block</th>
+                <th>Supervisor Name</th>
+                <th>Branch</th>
+                <th>Semester</th>
+                <th>Time</th>
+                <th>Subject</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Use Thymeleaf to populate the table with data -->
+            <tr th:each="assignment : ${assignments}">
+                <td th:text="${assignment.block}"></td>
+                
+
+                <td th:text="${assignment.timetable.semester}"></td>
+                <td th:text="${assignment.timetable.time}"></td>
+                <td th:text="${assignment.timetable.subject}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

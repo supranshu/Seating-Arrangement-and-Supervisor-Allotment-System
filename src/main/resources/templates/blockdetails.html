@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Details</title>
+    <!-- Add Bootstrap CSS link here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Your App Name</a>
+        <!-- Add navigation links here if needed -->
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Block Details</h1>
+        <!-- Form to add individual block details -->
+        <form action="/addBlock" method="post" class="needs-validation" th:object="${block}">
+            <div class="form-group">
+                <label for="blockNo">Block Number:</label>
+                <input type="number" class="form-control" id="blockNo" name="blockNo" required>
+            </div>
+            <div class="form-group">
+                <label for="benchCount">Bench Count:</label>
+                <input type="number" class="form-control" id="benchCount" name="benchCount" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add Block</button>
+        </form>
+        
+        <!-- Form to upload a CSV file -->
+        <form action="/uploadBlockCSV" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="csvFile">Upload CSV File:</label>
+                <input type="file" class="form-control-file" id="csvFile" name="csvFile" accept=".csv" required>
+            </div>
+            <button type="submit" class="btn btn-success">Upload CSV</button>
+        </form>
+
+        <h2 class="mt-4">Block List</h2>
+        
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -51,6 +51,13 @@
         
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <form action="/uploadttCSV" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="csvFile">Upload CSV File:</label>
+            <input type="file" name="csvFile" id="csvFile" accept=".csv" class="form-control-file">
+        </div>
+        <button type="submit" class="btn btn-primary">Upload CSV</button>
+    </form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
