@@ -8,9 +8,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.seating.model.Block;
 import com.seating.model.Supervisor;
 import com.seating.model.SupervisorAssignment;
 import com.seating.model.Time_Table;
+import com.seating.repo.BlockRepo;
 import com.seating.repo.SupervisorAssignmentRepository;
 import com.seating.repo.SupervisorRepo;
 import com.seating.repo.Time_TableRepository;
@@ -27,13 +29,17 @@ public class ReportService {
     @Autowired
     private SupervisorAssignmentRepository supervisorAssignmentRepository;
 
-    // Your other autowired repositories...
+    @Autowired
+    private BlockRepo blockRepo;
 
     public List<SupervisorAssignment> generateReport() {
         List<SupervisorAssignment> reportData = new ArrayList<>();
 
-        // Fetch supervisors from the database
         List<Supervisor> supervisors = supervisorRepository.findAll();
+
+        // Fetch available blocks
+        List<Block> availableBlocks = blockRepo.findAvailableBlocksLessThanMax();
+
 
         for (Supervisor supervisor : supervisors) {
             SupervisorAssignment assignment = new SupervisorAssignment();
@@ -49,6 +55,12 @@ public class ReportService {
                     if (!isSupervisorAssigned(supervisor.getName(), timetableEntry.getDate(), timetableEntry.getTime())) {
                         // Assign the supervisor to this exam
                         assignment.addAssignment(timetableEntry.getDate(), timetableEntry.getTime());
+
+                        // Assign a block to the supervisor
+                        if (!availableBlocks.isEmpty()) {
+                            Block assignedBlock = availableBlocks.remove(0); // Get the first available block
+                            assignment.setBlock(assignedBlock);
+                        }
                     }
                 }
             }
@@ -72,6 +84,7 @@ public class ReportService {
 
         return !assignments.isEmpty();
     }
+    
 }
 
 

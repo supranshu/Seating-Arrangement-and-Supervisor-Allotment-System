@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.Table;
 
@@ -31,6 +33,17 @@ public class SupervisorAssignment {
 
     @Column(name = "exam_time")
     private String examTime;
+    
+    @ManyToOne
+    @JoinColumn(name = "block_id")
+    private Block block; // New field to store the assigned block number
+    public Block getBlock() {
+        return block;
+    }
+
+    public void setBlock(Block assignedBlock) {
+        this.block = assignedBlock;
+    }
 
     // Initialize assignments map in the default constructor
     public SupervisorAssignment() {
@@ -96,14 +109,22 @@ public class SupervisorAssignment {
 	}
 
 	public SupervisorAssignment(Long id, String supervisorName, Date examDate, String examTime,
-			Map<Date, String> assignments) {
+			Map<Date, String> assignments,Block block) {
 		super();
 		this.id = id;
 		this.supervisorName = supervisorName;
 		this.examDate = examDate;
 		this.examTime = examTime;
 		this.assignments = assignments;
+		this.block=block;
 	}
+
+	@Override
+	public String toString() {
+		return "SupervisorAssignment [id=" + id + ", supervisorName=" + supervisorName + ", examDate=" + examDate
+				+ ", examTime=" + examTime + ", assignments=" + assignments + ", block=" +block+"]";
+	}
+	
     
     
 }

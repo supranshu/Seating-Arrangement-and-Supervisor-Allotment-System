@@ -4,31 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supervisor Allotment Report</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for adding margin and padding */
+        .table-container {
+            margin: 20px; /* Adjust margin as needed */
+            padding: 20px; /* Adjust padding as needed */
+        }
+    </style>
 </head>
 <body>
-    <h1>Supervisor Allotment Report</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Block</th>
-                <th>Supervisor Name</th>
-                <th>Branch</th>
-                <th>Semester</th>
-                <th>Time</th>
-                <th>Subject</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Use Thymeleaf to populate the table with data -->
-            <tr th:each="assignment : ${assignments}">
-                <td th:text="${assignment.block}"></td>
-                
-
-                <td th:text="${assignment.timetable.semester}"></td>
-                <td th:text="${assignment.timetable.time}"></td>
-                <td th:text="${assignment.timetable.subject}"></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container">
+	<h1>Supervisor Allotment Report</h1>
+    <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Supervisor Name</th>
+                    <th>Assignments</th>
+                    <th>Block No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="assignment : ${reportData}">
+                    <td th:text="${assignment.supervisorName}"></td>
+                    <td>
+                        <ul>
+                            <li th:each="entry : ${assignment.assignments}">
+                                <span th:text="${entry.key}"></span> - <span th:text="${entry.value}"></span>
+                            </li>
+                        </ul>
+                    </td>
+                    <td th:if="${assignment.block != null}" th:text="${assignment.block.blockNo}"></td>
+                    <td th:unless="${assignment.block != null}">N/A</td>
+                </tr>
+            </tbody>
+        </table>
+</div>
+    
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -19,8 +19,10 @@ public class ReportController {
     @GetMapping("/report")
     public String viewReport(Model model) {
         List<SupervisorAssignment> reportData = reportService.generateReport();
+        System.out.println(reportData.toString());
         model.addAttribute("reportData", reportData);
-        return "reporttemplate"; // This is the name of your Thymeleaf HTML template.
+        return "reporttemplate"; 
+
     }
 }
 

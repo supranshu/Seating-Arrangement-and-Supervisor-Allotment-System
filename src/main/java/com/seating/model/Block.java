@@ -1,5 +1,7 @@
 package com.seating.model;
 
+import com.seating.repo.BlockRepo;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -34,6 +36,6 @@ public class Block {
 	public String toString() {
 		return "Block [blockNo=" + blockNo + ", benchCount=" + benchCount + "]";
 	}
-	
+	 
     
 }
