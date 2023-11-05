@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.5.final using JasperReports Library version 6.20.5-3efcf2e67f959db3888d79f73dde2dbd7acb4f8e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6314b46-3b7f-4f6e-86fe-45f8748ef063">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="479"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="521"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="a007f9f9-27d5-4efb-b8d0-2085ed59024f">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+		<queryString language="SQL">
+			<![CDATA[select * from supervisor_shifts]]>
+		</queryString>
+		<field name="sup_id" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="sup_id"/>
+			<property name="com.jaspersoft.studio.field.label" value="sup_id"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="supervisor_name" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="supervisor_name"/>
+			<property name="com.jaspersoft.studio.field.label" value="supervisor_name"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="total_duties" class="java.lang.Integer">
+			<property name="com.jaspersoft.studio.field.name" value="total_duties"/>
+			<property name="com.jaspersoft.studio.field.label" value="total_duties"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift1" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift1"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift1"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift2" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift2"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift2"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift3" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift3"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift3"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift4" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift4"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift4"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift5" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift5"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift5"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift6" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift6"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift6"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift7" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift7"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift7"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift8" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift8"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift8"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift9" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift9"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift9"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift10" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift10"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift10"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift11" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift11"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift11"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift12" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift12"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift12"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift13" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift13"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift13"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift14" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift14"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift14"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+		<field name="shift15" class="java.lang.String">
+			<property name="com.jaspersoft.studio.field.name" value="shift15"/>
+			<property name="com.jaspersoft.studio.field.label" value="shift15"/>
+			<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+		</field>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from supervisor_shifts]]>
+	</queryString>
+	<field name="sup_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="sup_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="sup_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="supervisor_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="supervisor_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="supervisor_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="total_duties" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="total_duties"/>
+		<property name="com.jaspersoft.studio.field.label" value="total_duties"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift1"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift2" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift2"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift3" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift3"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift4" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift4"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift5" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift5"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift6" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift6"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift7" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift7"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift7"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift8" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift8"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift8"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift9" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift9"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift9"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift10" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift10"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift11"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift11"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift12"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift12"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift13"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift13"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift14"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift14"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<field name="shift15" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="shift15"/>
+		<property name="com.jaspersoft.studio.field.label" value="shift15"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supervisor_shifts"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="-10" width="570" height="50" uuid="5d5680c4-02a7-43fe-97d5-7495a5b81e9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Terna Engineering College, Nerul.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="50" width="680" height="40" uuid="1e11e027-9aac-4b34-9aab-af328b7dee6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supervisor Duty Allocation Chart.  from(21/11/2023  to 02/12/2023)]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="257" splitType="Stretch">
+			<componentElement>
+				<reportElement x="-10" y="10" width="832" height="200" uuid="2110d046-0c61-4283-aa58-adf7651fa564">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="49975ad5-2f74-4df3-ab7c-7457e5e28303">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="30" uuid="2902df68-907b-4216-800a-cd3cd24b9a97">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="30" height="50" uuid="3927a277-800d-49bf-9b8a-74ab6a301b82"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="30" height="30" uuid="a750a009-1db4-494f-87a7-6171685b1bf8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{sup_id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="140" uuid="fa96ac47-8938-4bc6-8818-79827c904234">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="140" height="50" uuid="0410f101-20d5-46d0-bb36-2d71e0e3b947"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[supervisor_name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="140" height="30" uuid="2e91b2cc-f46c-46b3-a3cb-cf55a44e09ec"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{supervisor_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="6b6dce00-5545-476c-b44a-eccc90c27e33">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="3bb31c37-5a01-43ea-8b9f-8a978c603547"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[Total                   Duties]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="db297aa5-3445-4fb5-9c8e-da7ef76bd6a5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{total_duties}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="c85085fb-054b-4ed0-bdbd-813b0f99ec18">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="6a91f371-85f0-438e-acf9-18762ff429ca"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift1]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="6f0adc73-91fc-4731-a741-257b3944d449"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift1} != null ? $F{shift1} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="53773926-4814-4f17-b572-db582b8e8dec">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="4332fa36-10da-4cfb-9f12-a45c1ce61e48"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift2]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="82d3699d-eab6-44c8-b111-d7c493ece00d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift2} != null ? $F{shift2} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="1182a6d1-eddf-4cdf-8101-b81a4d9049e2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="6a51bed2-d389-494e-b8ce-8e6121cff2ff"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift3]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="758419cf-9fae-420a-a157-7bae1b7502db"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift3} != null ? $F{shift3} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="e006fe66-3200-41ae-b4cf-0ff9d6e6bcad">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="68c6d62c-a2da-4b06-97a3-2cc093383ba5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift4]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="f5e8e15c-d69a-454d-8d94-9999935a6060"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift4} != null ? $F{shift4} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="9e2befb4-deb2-4a00-9b3b-2935d53d6b92">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="e9caf3cc-9d5b-435c-9e62-f35c72c02c01"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift5]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="607ad89e-85fd-49ee-8d1b-909328fd3d65"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift5} != null ? $F{shift5} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="88adc896-4cc9-41a8-8915-ac6980385945">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="a8624cff-41ae-4e28-8796-ece433f5194d"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift6]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="1f467b18-3856-4354-b702-dd73ddca1451"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift6} != null ? $F{shift6} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="bf811075-74eb-45f8-9fe3-9eab8670d953">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="7daaf51d-9507-499e-97a5-31ddc01263cd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift7]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="db9bacde-69d7-436c-9252-e0a6c40be606"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift7} != null ? $F{shift7} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="baa7732c-c0a1-47a6-8a22-fe9ec12560dc">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column11"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="3abf44d2-f318-4891-8cee-a95f4bb16ee3"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift8]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="52b82ec8-6411-41c4-8f9c-f0256c14a696"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift8} != null ? $F{shift8} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="2186a784-5d47-4a18-a612-0a18243ea920">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column12"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="81d4bbf4-98f4-4d8e-8897-21962234257e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift9]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="0687f341-0576-430d-9b4e-a29a8f200ed7"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift9} != null ? $F{shift9} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="89567e41-d2e5-4cca-8575-731c4aee3b93">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column13"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="cb9d7220-e5b5-4e9b-961c-dbe57b4402aa"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift10]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="b7122eb1-5e8f-476e-b280-e569e40aa057"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift10} != null ? $F{shift10} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="8b0d45cb-11a3-414a-b4a2-f76a176384ee">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column14"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="199ba1a0-e648-4126-a947-06d2f4911511"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift11]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="f90ac10e-0dee-4711-8645-e1d2e5c4bbcd"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift11} != null ? $F{shift11} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="1a00978a-ac70-48fd-8bf6-0f7fef36a566">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column15"/>
+						<jr:tableHeader style="Table_TH" height="30" rowSpan="1"/>
+						<jr:tableFooter style="Table_TH" height="30" rowSpan="1"/>
+						<jr:columnHeader style="Table_CH" height="50" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="50" uuid="b011a943-ef70-4e77-a670-7aa1d7c52201"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="14"/>
+								</textElement>
+								<text><![CDATA[shift12]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="63b11ed7-b984-4a08-b56e-81210d0a6bf0"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font size="12"/>
+								</textElement>
+								<textFieldExpression><![CDATA[($F{shift12} != null ? $F{shift12} : "-")]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</summary>
+</jasperReport>
