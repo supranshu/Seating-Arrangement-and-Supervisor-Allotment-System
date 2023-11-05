@@ -90,6 +90,13 @@ public class Time_Table {
 		this.subject = subject;
 	}
 
+	@Override
+	public String toString() {
+		return "Time_Table [id=" + id + ", branch=" + branch + ", semester=" + semester + ", date=" + date + ", time="
+				+ time + ", subject=" + subject + "]";
+	}
+	
+
     
 }
 

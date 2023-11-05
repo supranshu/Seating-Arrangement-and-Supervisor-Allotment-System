@@ -18,6 +18,7 @@ import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
 import com.seating.model.Block;
+import com.seating.model.Student;
 import com.seating.repo.BlockRepo;
 
 @Controller
@@ -40,7 +41,7 @@ public class BlockController {
     @PostMapping("/addBlock")
     public String addBlock(@ModelAttribute Block block) {
         // Save the entered block details to the repository
-    	
+    	System.out.println(block);
         blockRepo.save(block);
         
         // Redirect back to the blockdetails page
@@ -63,9 +64,10 @@ public class BlockController {
                 
                 long blockno=Long.parseLong(blockNo);
                 long benchcount=Long.parseLong(benchCount);
+                String blockCondition=row[2];
 
                 // Create and save a Block object
-                Block block = new Block(blockno, benchcount);
+                Block block = new Block(blockno, benchcount,blockCondition);
                 blockRepo.save(block);
             }
 
@@ -77,6 +79,12 @@ public class BlockController {
         }
 
         return "redirect:/blockdetails";
+    }
+    @GetMapping("/getBlocks")
+    public String getBlocks(Model model) {
+    	 List<Block> blocks = blockRepo.findAll();
+         model.addAttribute("blocks", blocks );
+         return "blockdetails";
     }
 }
 

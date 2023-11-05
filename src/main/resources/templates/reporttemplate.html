@@ -13,34 +13,34 @@
         }
     </style>
 </head>
-<body>
-<div class="container">
+<body style="background-color:#fff8e1;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/back">Home</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+     
+    </button>
+    </div>
+    
+    </nav>
+<div class="container text-center">
 	<h1>Supervisor Allotment Report</h1>
-    <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Supervisor Name</th>
-                    <th>Assignments</th>
-                    <th>Block No</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr th:each="assignment : ${reportData}">
-                    <td th:text="${assignment.supervisorName}"></td>
-                    <td>
-                        <ul>
-                            <li th:each="entry : ${assignment.assignments}">
-                                <span th:text="${entry.key}"></span> - <span th:text="${entry.value}"></span>
-                            </li>
-                        </ul>
-                    </td>
-                    <td th:if="${assignment.block != null}" th:text="${assignment.block.blockNo}"></td>
-                    <td th:unless="${assignment.block != null}">N/A</td>
-                </tr>
-            </tbody>
-        </table>
 </div>
-    
+  <iframe src="https://drive.google.com/file/d/1Idsbu_VYQOKeqqKnZh-739kYp5GYZ7uA/preview" style="margin-left:350px " width="840" height="680" allow="autoplay"></iframe>
+ <div class="text-center" style="margin-bottom: 50px">
+    <a class="btn btn-primary btn-lg" href="/download/pdf">Download Report</a>
+</div>
+
+ 
+ 
  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

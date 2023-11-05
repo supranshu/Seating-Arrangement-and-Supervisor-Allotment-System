@@ -1,11 +1,17 @@
 package com.seating.controller;
 
 
+import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +26,8 @@ import com.seating.model.TimeTableForm;
 import com.seating.model.Time_Table;
 import com.seating.repo.AdminRepo;
 import com.seating.repo.Time_TableRepository;
+
+
 
 
 @Controller
@@ -39,6 +47,7 @@ public class HomeController {
 		return "login";
 	}
 	
+	
 	@PostMapping("/login")
 	public String authenticateUser(Model model, String userid, String password) {
 	    Admin user = adminRepo.findByUserid(userid);
@@ -57,6 +66,10 @@ public class HomeController {
 	    }
 	}
 
+    @GetMapping("/back")
+	public String back() {
+    	return "home";
+    }
 	
 	@GetMapping("/time-table")
 	public String timetable(Model model) {
@@ -122,15 +135,31 @@ public class HomeController {
 	        // Close the CSVReader
 	        reader.close();
 
-	        // If successful, return a success message or redirect to another page
-	        return "redirect:/timetable"; // Assuming you have a "timetable" endpoint to display timetables
+	        
+	        return "redirect:/timetable"; 
 	    } catch (Exception e) {
-	        // Handle exceptions (e.g., CSV parsing error)
+	        
 	        return "/";
 	    }
 	}
 
+	@GetMapping("/download/pdf")
+    public ResponseEntity<byte[]> downloadPdf() throws IOException {
+        
+        ClassPathResource pdfFile = new ClassPathResource("static/super.pdf");
 
+        
+        byte[] pdfBytes = Files.readAllBytes(pdfFile.getFile().toPath());
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_PDF);
+        headers.setContentDispositionFormData("attachment", "supervisor_allotment.pdf");
+        headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
+
+        return ResponseEntity.ok()
+            .headers(headers)
+            .body(pdfBytes);
+    }
 
 
 
