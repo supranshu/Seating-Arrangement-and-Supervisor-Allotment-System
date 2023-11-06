@@ -36,7 +36,7 @@
 		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
 		<queryString language="SQL">
-			<![CDATA[select * from supervisor_shifts]]>
+			<![CDATA[SELECT * FROM railway.destination_table;]]>
 		</queryString>
 		<field name="sup_id" class="java.lang.Integer">
 			<property name="com.jaspersoft.studio.field.name" value="sup_id"/>
@@ -130,7 +130,7 @@
 		</field>
 	</subDataset>
 	<queryString language="SQL">
-		<![CDATA[select * from supervisor_shifts]]>
+		<![CDATA[SELECT * FROM railway.destination_table;]]>
 	</queryString>
 	<field name="sup_id" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.name" value="sup_id"/>
